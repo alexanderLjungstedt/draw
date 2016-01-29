@@ -1,0 +1,29 @@
+*{padding:0px;margin:0px;}
+body {background:#282828;}
+#squareHolder {width:900px;height:500px;border:1px solid #43e4db;margin:10px auto;line-height:0;}
+#sizeHolder {width:900px; border:1px solid #43e4db; margin:20px auto; color:#282828}
+
+.square {
+	border:1px dashed #43e4db;
+	width:50px;
+	height:50px;
+	display:inline-block;
+	margin:0px;
+	box-sizing:border-box;
+	opacity:0;
+}
+
+.sizeButtons {
+	background:#43e4db;
+	padding:3px 6px;
+	display:inline-block;
+	text-decoration:none;
+	}
+	
+.sizeButtons:hover {
+		cursor: pointer;
+}
+
+.sizeActive {
+	color:#fff;
+}
