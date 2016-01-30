@@ -11,6 +11,7 @@ body {background:#282828;}
 	margin:0px;
 	box-sizing:border-box;
 	opacity:0;
+	background: rgb(40, 40, 40);
 }
 
 .sizeButtons {

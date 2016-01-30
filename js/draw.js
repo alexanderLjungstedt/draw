@@ -24,8 +24,8 @@ $(document).ready(function(){
 	//-----------------Events--------------
 	
 	//ChangeColorWhenMouseEnterSquare
-	$('#squareHolder').on( 'mouseenter', 'div', function(){
-		$(this).css('background', '#43e4db');
+	$('#squareHolder').on( 'mouseenter', 'div', function(){  //.mouseenter() wont work because the elements are created after page load. Or something...
+		$(this).css('background', GreyScale(this));
 		console.log('mouseenter');
 	
 	});	
@@ -59,5 +59,15 @@ $(document).ready(function(){
 		$('.square').width(size[c] - 2);
 		$('.square').height(size[c] - 2);
 		$('.square').fadeTo('slow', 1);
+	};
+	
+	function GreyScale(domObject) {
+		var colorRGB = $(domObject).css('background-color');
+		var colorValue = colorRGB.match(/\d{1,3}/);
+		colorValue = parseInt(colorValue[0]) + 40;
+		console.log(colorRGB);
+		console.log(colorValue);
+		//return 'red';
+		return 'rgb(' + colorValue + ', ' + colorValue + ', ' + colorValue + ')';
 	};
 });
